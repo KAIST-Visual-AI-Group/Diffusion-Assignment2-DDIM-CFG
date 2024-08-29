@@ -21,7 +21,7 @@
 </div>
 
   
-#### Due: TBD e.g., Mar 21 (Mon) 23:59 KST </b>
+#### Due: Oct 8 (Tue) 23:59 KST </b>
 #### Where to Submit: GradeScope
 
 ## Abstract
