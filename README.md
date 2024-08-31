@@ -151,7 +151,7 @@ The optional argument `class_label` is assumed to be a PyTorch tensor holding th
 Apply the one-hot encoding to the class labels. You may use the predefined linear layer `self.class_embedding`.
 For now, the main backbone of the network is conditioned only on the diffusion timestep `temb`. How can we extend this further to support class conditioning?
 
-**Use the script `image_diffusion_todo/train.py` with the flag `--use_cfg=True` to train the model.**
+**Use the script `image_diffusion_todo/train.py` with the flag `--use_cfg` to train the model with CFG enabled.**
 
 > Before proceeding to the next steps, we highly recommend you to check whether class-conditioned training works properly.
 
