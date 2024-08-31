@@ -58,7 +58,7 @@ if __name__ == "__main__":
     parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--ckpt_path", type=str)
     parser.add_argument("--save_dir", type=str)
-    parser.add_argument("--use_cfg", type=bool, default=False)
+    parser.add_argument("--use_cfg", action="store_true")
     parser.add_argument("--sample_method", type=str, default="ddpm")
     parser.add_argument("--cfg_scale", type=float, default=7.5)
 
