@@ -20,9 +20,6 @@
    <img src="./assets/images/assn2_teaser.png">
 </div>
 
-  
-#### Due: Oct 8 (Tue) 23:59 KST </b>
-#### Where to Submit: GradeScope
 
 ## Abstract
 In Assignment 1, we implemented the DDPM and explored how learning to remove noise from data can serve as a powerful framework for generative modeling. However, one immediate drawback of DDPM is its slow sampling process, typically requiring hundreds of denoising steps that can take several minutes, compared to existing techniques like VAEs and GANs. Another interesting direction we have not explored yet is conditional generation, since generative models become more useful when they offer sufficient control over the generation process. For instance, a user might want to generate images of a specific animal species after training the model on a dataset containing multiple animal classes. With that in mind, we will also explore the de facto standard technique for improving sample fidelity at the expense of sample diversity.
