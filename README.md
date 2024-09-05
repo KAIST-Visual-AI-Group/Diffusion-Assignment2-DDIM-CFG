@@ -20,9 +20,6 @@
    <img src="./assets/images/assn2_teaser.png">
 </div>
 
-  
-#### Due: Oct 8 (Tue) 23:59 KST </b>
-#### Where to Submit: GradeScope
 
 ## Abstract
 In Assignment 1, we implemented the DDPM and explored how learning to remove noise from data can serve as a powerful framework for generative modeling. However, one immediate drawback of DDPM is its slow sampling process, typically requiring hundreds of denoising steps that can take several minutes, compared to existing techniques like VAEs and GANs. Another interesting direction we have not explored yet is conditional generation, since generative models become more useful when they offer sufficient control over the generation process. For instance, a user might want to generate images of a specific animal species after training the model on a dataset containing multiple animal classes. With that in mind, we will also explore the de facto standard technique for improving sample fidelity at the expense of sample diversity.
@@ -151,7 +148,7 @@ The optional argument `class_label` is assumed to be a PyTorch tensor holding th
 Apply the one-hot encoding to the class labels. You may use the predefined linear layer `self.class_embedding`.
 For now, the main backbone of the network is conditioned only on the diffusion timestep `temb`. How can we extend this further to support class conditioning?
 
-**Use the script `image_diffusion_todo/train.py` with the flag `--use_cfg=True` to train the model.**
+**Use the script `image_diffusion_todo/train.py` with the flag `--use_cfg` to train the model with CFG enabled.**
 
 > Before proceeding to the next steps, we highly recommend you to check whether class-conditioned training works properly.
 
