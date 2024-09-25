@@ -163,7 +163,7 @@ For now, the main backbone of the network is conditioned only on the diffusion t
 
 #### 2-2: Implement CFG Training
 
-Complete the `TODO` block in the method `forward` of the class `UNet` defined in the file `image_diffusion_todo/network.py`. It should be suffice to write a few lines of code that replace class labels with a zero tensor with a certain probability.
+Complete the `TODO` block in the method `forward` of the class `UNet` defined in the file `image_diffusion_todo/network.py`. It should be suffice to write a few lines of code that replace class labels with a zero tensor with probability `self.cfg_dropout` defined in class `UNet`.
 
 #### 2-3: Implement CFG Sampling
 
