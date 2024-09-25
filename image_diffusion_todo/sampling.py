@@ -43,7 +43,11 @@ def main(args):
                 guidance_scale=args.cfg_scale,
             )
         else:
-            samples = ddpm.sample(B)
+            samples = ddpm.sample(
+                B,
+                class_label=torch.randint(1, 4, (B,)),
+                guidance_scale=0.0,
+            )
 
         pil_images = tensor_to_pil_image(samples)
 
