@@ -177,7 +177,14 @@ by providing the path to your model's checkpoint trained *with* CFG training ena
 
 #### 2-4: Test and Evaluate
 
-As in our previous assignment, evaluate and report the FID measured on the samples generated using CFG with the scale of 0.0, and 7.5 (default). You can use the script `image_diffusion_todo/fid/measure_fid.py` to measure the FID score. The pre-trained inception model for FID is provided in the file `image_diffusion_todo/fid/afhq_inception.ckpt`.
+As in our previous assignment, evaluate and report the FID measured on the samples generated using CFG with the scale of 0.0, and 7.5 (default).
+
+Do NOT forget to execute `dataset.py` before measuring FID score. Otherwise, the output will be incorrect due to the discrepancy between the image resolutions.
+```
+python dataset.py # to constuct eval directory.
+```
+
+After processing the data, use the script `image_diffusion_todo/fid/measure_fid.py` to measure the FID score. The pre-trained inception model for FID is provided in the file `image_diffusion_todo/fid/afhq_inception.ckpt`.
 ```
 python image_diffusion_todo/fid/measure_fid.py @GT_IMG_DIR @ GEN_IMG_DIR
 ```
