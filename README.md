@@ -188,7 +188,7 @@ After processing the data, use the script `image_diffusion_todo/fid/measure_fid.
 ```
 python image_diffusion_todo/fid/measure_fid.py @GT_IMG_DIR @ GEN_IMG_DIR
 ```
-Use the root directory of the AFHQ dataset (e.g., `data/afhq`) as @GT_IMG_DIR. The script will automatically search and load the images. The path @DIR_TO_SAVE_IMGS should be the same as the one you provided when running the script `sampling.py`.
+Use the directory containing the processed data (e.g., `data/afhq/eval`) as @GT_IMG_DIR. The script will automatically search and load the images. The path @DIR_TO_SAVE_IMGS should be the same as the one you provided when running the script `sampling.py`.
 
 ## What to Submit
 
