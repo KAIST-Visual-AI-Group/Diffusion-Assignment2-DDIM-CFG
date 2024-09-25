@@ -37,11 +37,11 @@ class DiffusionModule(nn.Module):
         batch_size,
         return_traj=False,
         class_label: Optional[torch.Tensor] = None,
-        guidance_scale: Optional[float] = 1.0,
+        guidance_scale: Optional[float] = 0.0,
     ):
         x_T = torch.randn([batch_size, 3, self.image_resolution, self.image_resolution]).to(self.device)
 
-        do_classifier_free_guidance = guidance_scale > 1.0
+        do_classifier_free_guidance = guidance_scale > 0.0
 
         if do_classifier_free_guidance:
 
@@ -63,7 +63,11 @@ class DiffusionModule(nn.Module):
                 raise NotImplementedError("TODO")
                 #######################
             else:
-                noise_pred = self.network(x_t, timestep=t.to(self.device))
+                noise_pred = self.network(
+                    x_t,
+                    timestep=t.to(self.device),
+                    class_label=class_label,
+                )
 
             x_t_prev = self.var_scheduler.step(x_t, t, noise_pred)
 
