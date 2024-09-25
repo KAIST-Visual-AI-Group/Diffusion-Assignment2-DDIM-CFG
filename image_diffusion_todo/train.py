@@ -93,7 +93,16 @@ def main(args):
                 plt.plot(losses)
                 plt.savefig(f"{save_dir}/loss.png")
                 plt.close()
-                samples = ddpm.sample(4, return_traj=False)
+
+                if args.use_cfg:  # Conditional, CFG training
+                    samples = ddpm.sample(
+                        4,
+                        class_label=torch.randint(1, 4, (4,))
+                        return_traj=False,
+                    )
+                else:  # Unconditional training
+                    samples = ddpm.sample(4, return_traj=False)
+
                 pil_images = tensor_to_pil_image(samples)
                 for i, img in enumerate(pil_images):
                     img.save(save_dir / f"step={step}-{i}.png")
