@@ -167,7 +167,7 @@ Complete the `TODO` block in the method `forward` of the class `UNet` defined in
 
 #### 2-3: Implement CFG Sampling
 
-Complete the `if do_classifier_free_guidance` blocks in the method `sample` in the file `image_diffusion_todo/model.py`. In our implementation, the CFG is enabled by setting `cfg_scale` greater than 1.0.
+Complete the `if do_classifier_free_guidance` blocks in the method `sample` in the file `image_diffusion_todo/model.py`. In our implementation, the CFG is enabled by setting `cfg_scale` greater than 0.0.
 
 You can test your implementation by running the script `image_diffusion_todo/sampling.py`. Specifically, run
 ```
