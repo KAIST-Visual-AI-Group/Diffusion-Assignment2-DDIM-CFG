@@ -97,7 +97,7 @@ def main(args):
                 if args.use_cfg:  # Conditional, CFG training
                     samples = ddpm.sample(
                         4,
-                        class_label=torch.randint(1, 4, (4,))
+                        class_label=torch.randint(1, 4, (4,)).to(config.device),
                         return_traj=False,
                     )
                 else:  # Unconditional training
