@@ -171,7 +171,7 @@ Complete the `if do_classifier_free_guidance` blocks in the method `sample` in t
 
 You can test your implementation by running the script `image_diffusion_todo/sampling.py`. Specifically, run
 ```
-python image_diffusion_todo/sampling.py --ckpt_path @CKPT_PATH --save_dir @DIR_TO_SAVE_IMGS --use_cfg True
+python image_diffusion_todo/sampling.py --ckpt_path @CKPT_PATH --save_dir @DIR_TO_SAVE_IMGS --use_cfg
 ```
 by providing the path to your model's checkpoint trained *with* CFG training enabled.
 
