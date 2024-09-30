@@ -45,6 +45,7 @@ pip install -r requirements.txt
 **Please note that this assignment is heavily dependent on Assignment 1. To begin, you should copy the functions you implemented in [Assignment 1](https://github.com/KAIST-Visual-AI-Group/Diffusion-Assignment1-DDPM).** Specifically, make sure to complete the required components (e.g., the noise prediction network architecture and the forward/reverse DDPM steps) in the following files:
 - `2d_plot_diffusion_todo/network.py`;
 - `2d_plot_diffusion_todo/ddpm.py`;
+- `image_diffusion_todo/model.py`;
 - `image_diffusion_todo/scheduler.py`.
 
 ## Code Structure
